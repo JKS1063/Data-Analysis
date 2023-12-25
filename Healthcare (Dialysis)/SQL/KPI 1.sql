@@ -1,0 +1,15 @@
+use dialysis_project;
+
+show columns from dialysis_1;
+
+show columns from dialysis_1 like '%_summary';
+
+select sum(No_of_patients_included_in_the_transfusion_summary) as Patients_in_Transfusion_summary ,
+sum(No_of_patients_in_hypercalcemia_summary) as Patients_in_Hypercalcemia_summary,
+sum(No_of_patients_in_Serum_phosphorus_summary) as Patients_in_Serum_Phosporus_summary,
+sum(No_of_patients_included_in_hospitalization_summary) as Patients_in_Hospitalization_summary,
+sum(No_of_hospitalizations_included_in_hospital_readmission_summary) as Patients_in_Hospital_Readmission_summary,
+sum(No_of_Patients_included_in_survival_summary) as Patients_in_Survival_summary,
+sum(No_of_Patients_included_in_fistula_summary) as Patients_in_Fitsula_summary,
+sum(No_of_patients_in_long_term_catheter_summary) as Patients_in_long_term_Catheter_summary,
+sum(No_of_patients_in_nPCR_summary) as Patients_in_nPCR_summary from dialysis_1;
